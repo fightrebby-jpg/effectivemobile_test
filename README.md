@@ -69,4 +69,60 @@
 Написать пример REST API запроса, который будет вызываться при переходе пользователя на данный экран. 
 Привести пример ответа этого REST API в соответствии с макетом. Формат - JSON. Учесть, что при клике на плашку магазина должен осуществляться переход по ссылке на внешний ресурс. 
 
-   
+**Решение, задание 2**
+
+Пример REST API запроса
+
+GET /api/partners/stores
+Host: api.petrushkagreen.ru
+Authorization: Bearer <токен авторизации>
+Accept: application/json
+
+Пример ответа на REST API запроса в формате json
+
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "METRO",
+      "delivery_info": "Ближайшая доставка сегодня 21:00-23:00",
+      "image_url": "https://petrushkagreen.ru/images/stores/metro_logo.png",
+      "external_url": "https://www.metro.ru"
+    },
+    {
+      "id": 2,
+      "name": "Ашан",
+      "delivery_info": "Ближайшая доставка сегодня 18:00-20:00",
+      "image_url": "https://petrushkagreen.ru/images/stores/ashan_logo.png",
+      "external_url": "https://www.ashan.ru"
+    },
+    {
+      "id": 3,
+      "name": "ВкусВилл",
+      "delivery_info": "Быстрая доставка от 20 до 60 минут",
+      "image_url": "https://petrushkagreen.ru/images/stores/vkusvill_logo.png",
+      "external_url": "https://www.vkusvill.ru"
+    },
+    {
+      "id": 4,
+      "name": "Виктория",
+      "delivery_info": "Ближайшая доставка сегодня 17:00-19:00",
+      "image_url": "https://petrushkagreen.ru/images/stores/victoria_logo.png",
+      "external_url": "https://www.victoria.com"
+    }
+    
+]
+}   
+
+**Задание 3: архитектура**
+
+Описание:
+Заказчик хочет, что в мобильное приложение интернет-магазина "Петрушка Зеленая" начали приходить пуши. Они могут быть разными: о том, что заказ слишком долго лежит без действий в корзине, об отмене заказа, рекламные рассылки и прочее. То есть нужен функционал, а какие пуши отправлять - точно найдется.
+
+Что нужно сделать:
+Построить верхнеуровневую архитектурую схему - как должна работать отправка PUSH уведомлений в данном приложении. Можно просто в виде блок схем. Считаем, что на бэкенде микросервисная архитектура. В данном задании рекомендуется в интернете изучить архитектуры подобных решений.
+
+<img width="615" height="725" alt="верхнеуровневая схема" src="https://github.com/user-attachments/assets/adb76e38-b157-4b72-8b92-48d6e6e7205f" />
+
+
+
