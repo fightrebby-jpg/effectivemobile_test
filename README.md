@@ -74,10 +74,12 @@
 
 **Пример REST API запроса**
 
+```
 GET /api/partners/stores
 Host: api.petrushkagreen.ru
 Authorization: Bearer <токен авторизации>
 Accept: application/json
+```
 
 **Пример ответа на REST API запроса в формате json**
 ```
